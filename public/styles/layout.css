@@ -20,9 +20,13 @@ body {
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
 }
-nav {
-  font-family: Bungee, sans-serif;
+
+#newTweet {
+  color: #ffffff;
+  font-size: 12px;
+  float: right;
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
