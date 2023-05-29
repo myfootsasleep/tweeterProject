@@ -27,6 +27,12 @@ body {
   float: right;
 }
 
+.container {
+  display: flex;
+  width: 90%;
+  max-width: max-content;
+  margin: auto;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
