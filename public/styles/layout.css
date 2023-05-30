@@ -27,11 +27,13 @@ body {
   float: right;
 }
 
-.container {
-  display: flex;
-  width: 90%;
-  max-width: max-content;
-  margin: auto;
+main {
+background-color: #f4f1ec;
+inline-size: 90%;
+overflow-wrap: break-word;
+align-content: center;
+max-width: max-content;
+margin: auto;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
