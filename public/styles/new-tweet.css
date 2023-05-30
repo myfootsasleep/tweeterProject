@@ -1,0 +1,20 @@
+.new-tweet{
+}
+.form-footer{
+  display: flex;
+  justify-content: space-between;
+  font-family: Bungee, sans-serif;
+}
+button{
+  background-color: #4056a1;
+  color: white;
+}
+
+#tweet-text {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  outline: none;
+  resize: none;
+}
