@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   font-family: Bungee, sans-serif;
+  padding-bottom: 32px;
 }
 button{
   background-color: #4056a1;
@@ -15,4 +16,28 @@ button{
   border-bottom: 3px solid black;
   outline: none;
   resize: none;
+}
+article {
+border: 3px solid black;
+padding: 16px;
+}
+article:hover{
+box-shadow: 5px 5px #859cea;
+}
+article p {
+  padding-bottom: 40px;
+  border-bottom: 3px solid black;
+  border-width: ;
+  margin-bottom: 0px;
+}
+.footer-tags {
+  display: flex;
+  justify-content: space-between;
+}
+.header-tags {
+  display: flex;
+  justify-content: space-between;
+}
+article header i:hover{
+  color: red;
 }

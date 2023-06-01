@@ -7,14 +7,14 @@ $(document).ready(function() {
     const inputChar = $(this).val().length;
     const charCounter = maxChar - inputChar;
 
-    const $counterElement = $(this).parent().find(".counter");
+    const counter = $(this).parent().find(".counter");
 
-    $counterElement.text(charCounter);
+    counter.text(charCounter);
 
     if (charCounter < 0) {
-      $counterElement.css("color", "red");
+      counter.css("color", "red");
     } else {
-      $counterElement.css("color", "#545149");
+      counter.css("color", "#545149");
     }
   });
 });
