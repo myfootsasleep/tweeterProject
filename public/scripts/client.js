@@ -13,14 +13,14 @@ $(document).ready(function() {
 
   const data = [
 
-  ]
+  ];
 
   const renderTweets = function(tweets) {
-    for(let i of tweets){
-      const createTweet = createTweetElement(i)
-      $("main").append(createTweet)
+    for (let i of tweets) {
+      const createTweet = createTweetElement(i);
+      $("main").append(createTweet);
     }
-  }
+  };
 
   const createTweetElement = function(data) {
     const markup = `
@@ -39,7 +39,7 @@ $(document).ready(function() {
         ${data.content.text}
         </p>
         <div class ="header-tags">
-          <div>${data.created_at}</div>
+          <div>${timeago.format(data.created_at)}</div>
         <div class = "header-icons">
           <i class="fa-regular fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -54,14 +54,21 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    $.post("/tweets", $(this).serialize());
+    let textVal = $("#tweet-text").val().length;
+    if (textVal === 0 || textVal === null) {
+      alert("Tweet field can't be empty or null");
+    } else if (textVal > 140) {
+      alert("Tweet cannot exceed the character limit");
+    } else {
+      $.post("/tweets", $(this).serialize());
+    }
   });
   const loadTweets = () => {
     $.ajax("/tweets")
-    .then(function(tweets){
-      renderTweets(tweets)
-    })
-   }
-  loadTweets()
+      .then(function(tweets) {
+        renderTweets(tweets);
+      });
+  };
+  loadTweets();
 });
 
