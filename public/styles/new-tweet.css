@@ -20,6 +20,7 @@ button{
 article {
 border: 3px solid black;
 padding: 16px;
+margin-bottom: 32px;
 }
 article:hover{
 box-shadow: 5px 5px #859cea;
@@ -27,8 +28,7 @@ box-shadow: 5px 5px #859cea;
 article p {
   padding-bottom: 40px;
   border-bottom: 3px solid black;
-  border-width: ;
-  margin-bottom: 0px;
+ 
 }
 .footer-tags {
   display: flex;
