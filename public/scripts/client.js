@@ -11,14 +11,11 @@
 $(document).ready(function() {
   console.log("Client.js scripts are up and running");
 
-  const data = [
-
-  ];
 
   const renderTweets = function(tweets) {
     for (let i of tweets) {
       const createTweet = createTweetElement(i);
-      $("main").append(createTweet);
+      $(".tweetContainer").prepend(createTweet);
     }
   };
 
@@ -60,7 +57,8 @@ $(document).ready(function() {
     } else if (textVal > 140) {
       alert("Tweet cannot exceed the character limit");
     } else {
-      $.post("/tweets", $(this).serialize());
+      $.post("/tweets", $(this).serialize())
+        .then(loadTweets);
     }
   });
   const loadTweets = () => {
@@ -70,5 +68,7 @@ $(document).ready(function() {
       });
   };
   loadTweets();
+
 });
+
 
