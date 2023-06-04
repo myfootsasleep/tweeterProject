@@ -10,7 +10,12 @@
 // Fake data taken from initial-tweets.json
 $(document).ready(function() {
   console.log("Client.js scripts are up and running");
-
+  
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const renderTweets = function(tweets) {
     for (let i of tweets) {
@@ -20,6 +25,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = function(data) {
+    const safeHTML = `<p>${escape(data.content.text)}</p>`;
     const markup = `
     <article>
         <footer>
@@ -32,9 +38,7 @@ $(document).ready(function() {
         </div>
         </footer>
         <header>
-        <p>
-        ${data.content.text}
-        </p>
+       ${safeHTML}
         <div class ="header-tags">
           <div>${timeago.format(data.created_at)}</div>
         <div class = "header-icons">
