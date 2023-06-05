@@ -41,11 +41,6 @@ margin: auto;
   padding: 16px;
   display: none;
 }
-.errorMessage {
-  color: red;
-  display: flex;
-  /* display: none; */
-}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
