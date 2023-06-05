@@ -33,6 +33,9 @@ width: 90%;
 overflow-wrap: break-word;
 margin: auto;
 }
+.errorParent{
+  display: none;
+}
 .errorMessage {
   color: red;
   display: flex;
