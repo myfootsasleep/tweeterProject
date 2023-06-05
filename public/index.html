@@ -42,6 +42,16 @@
     <!-- Page-specific (main) content here -->
     <main>
     <section class="new-tweet">
+      <div class="errorParent">
+        <div class = "errorMessage">
+        <div><i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i></div>
+        <div id = "actualErrorMessage">
+        <!-- This is where the error code -->
+       </div>
+       <div><i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i></div>     
+        </div>
+      </div>
+      
       <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>

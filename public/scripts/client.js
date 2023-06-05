@@ -11,7 +11,7 @@
 $(document).ready(function() {
   console.log("Client.js scripts are up and running");
   
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -55,11 +55,14 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
+    $(".errorMessage").hide();
     let textVal = $("#tweet-text").val().length;
     if (textVal === 0 || textVal === null) {
-      alert("Tweet field can't be empty or null");
+      $("#actualErrorMessage").replaceWith("<div id = actualErrorMessage>Can't leave blank!</div>");
+      $(".errorMessage").slideDown();
     } else if (textVal > 140) {
-      alert("Tweet cannot exceed the character limit");
+      $("#actualErrorMessage").replaceWith("<div id = actualErrorMessage>Can't exceed the limit of text!</div");
+      $(".errorMessage").slideDown();
     } else {
       $.post("/tweets", $(this).serialize())
         .then(loadTweets);
