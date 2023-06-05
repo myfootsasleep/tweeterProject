@@ -33,13 +33,13 @@ width: 90%;
 overflow-wrap: break-word;
 margin: auto;
 }
-.errorParent{
+.errorMessage {
+  color: red;
   display: flex;
   margin-top: 16px;
   border: 3px solid red;
   color: red;
   padding: 16px;
-  display: none;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

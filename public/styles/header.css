@@ -8,5 +8,11 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding-top: 120px;
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+@media only screen and (max-width: 768px) {
+  header.banner {
+    background-color: #0088ff;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  
+  }
 }

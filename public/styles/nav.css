@@ -9,3 +9,11 @@ nav {
   width: 100%;
   position: fixed;
 }
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: #0088ff;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  
+  }
+}
