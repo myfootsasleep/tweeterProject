@@ -34,12 +34,12 @@ overflow-wrap: break-word;
 margin: auto;
 }
 .errorParent{
-  display: flex !important;
+  display: flex;
   margin-top: 16px;
   border: 3px solid red;
   color: red;
   padding: 16px;
-  flex-wrap: nowrap;
+  display: none;
 }
 .errorMessage {
   color: red;

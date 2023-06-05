@@ -55,14 +55,14 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    $(".errorMessage").hide();
+    $(".errorParent").hide();
     let textVal = $("#tweet-text").val().length;
     if (textVal === 0 || textVal === null) {
       $("#actualErrorMessage").replaceWith("<div id = actualErrorMessage>Can't leave blank!</div>");
-      $(".errorMessage").slideDown();
+      $(".errorParent").slideDown();
     } else if (textVal > 140) {
       $("#actualErrorMessage").replaceWith("<div id = actualErrorMessage>Can't exceed the limit of text!</div");
-      $(".errorMessage").slideDown();
+      $(".errorParent").slideDown();
     } else {
       $.post("/tweets", $(this).serialize())
         .then(loadTweets);
